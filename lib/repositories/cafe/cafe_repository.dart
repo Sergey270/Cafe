@@ -4,15 +4,17 @@ import 'package:dio/dio.dart';
 
 part 'cafe_repository.g.dart';
 
-@RestApi(baseUrl: "https://run.mocky.io/v3/")
+@RestApi(baseUrl: "https://5d42a6e2bc64f90014a56ca0.mockapi.io/api/v1/")
 abstract class CafeApiService {
   factory CafeApiService(Dio dio, {String baseUrl}) = _CafeApiService;
 
-  @GET("/058729bd-1402-4578-88de-265481fd7d54")
-  Future<List<Categories>> getCategories();
+  @GET("/tasks")
+  Future<HttpResponse<List<Categories>>> getCategories(
+
+      );
 
   @GET("/aba7ecaa-0a70-453b-b62d-0e326c859b3b")
-  Future<List<Dishes>> getDishes();
+  Future<HttpResponse<List<Dishes>>> getDishes();
 
 
 

@@ -14,6 +14,10 @@ void main(List<String> args) {
   final client = CafeApiService(dio);
   client.getCategories().then((it) => logger.i(it));
 
+
+List<Categories>? list;
+final fdfd = list?[1];
+
   runApp(const MyApp());
 }
 
@@ -74,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+             "if(List )",
             ),
             Text(
               '$_counter',
