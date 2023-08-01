@@ -1,22 +1,14 @@
 import 'package:cafe/repositories/cafe/cafe_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+
 import 'package:retrofit/retrofit.dart';
 
 
 
-final logger = Logger();
 
-void main(List<String> args) {
-  final dio = Dio();
-  dio.options.headers["Demo-Header"] = "demo header";
-  final client = CafeApiService(dio);
-  client.getCategories().then((it) => logger.i(it));
+void main() {
 
-
-List<Categories>? list;
-final fdfd = list?[1];
 
   runApp(const MyApp());
 }
